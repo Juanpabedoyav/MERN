@@ -14,7 +14,6 @@ const [state, dispatch] = useReducer(ShippingsReducer, INITIAL_STATE)
         try {
           const res = await axios.get('http://localhost:3000/api/shippings')
           dispatch({type : 'setShippings', payload: res.data})
-          debugger
         } catch (error) {
           console.log(error)
         }
