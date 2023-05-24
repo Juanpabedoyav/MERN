@@ -1,27 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { Text, View } from 'react-native'
-import axios from 'axios'
+import { ShippingsContext } from "../../context/shippings/ShippingsContext"
 const ShippingList = () => {
 
-  const [listShipping, setListShipping] = useState([])
+  const {shippings} = useContext(ShippingsContext)
 
-  const fetchShippingList = async () => {
-    try {
-      const res = await axios.get('http://localhost:3000/api/shippings')
-      setListShipping(res.data)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-  useEffect(() => {
-    fetchShippingList()
-  }, [])
+  
 
   return (
     <>
       <Text>Shipping List</Text>
       <View>
-        {listShipping.map(shipping => (
+        {shippings.map(shipping => (
           <View key={shipping._id}>
             <Text>Place of Dispatch: {shipping.placeDispatch}</Text>
           </View>
