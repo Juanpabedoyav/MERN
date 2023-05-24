@@ -1,12 +1,11 @@
 import { StyleSheet,  View } from 'react-native'
 import ShippingList from './components/ShippingList'
-import FormAddShipping from './components/FormAddShipping'
+// import FormAddShipping from './components/FormAddShipping'
 
 export default function App() {
   return (
     <View style={styles.container}>
       <ShippingList />
-      <FormAddShipping />
     </View>
   )
 }
