@@ -19,8 +19,8 @@ const ShippingList = () => {
         {shippings.map(shipping => (
           <>
             <ListItem.Part key={shipping._id} middle>
-            <Text grey10 text60 marginL-10>{shipping.placeDispatch}</Text>
-               <Text grey10 text60 marginL-10>{shipping.placeDestination}</Text>
+            <Text  text60 marginL-10>{shipping.placeDispatch}</Text>
+               <Text  text60 marginL-10>{shipping.placeDestination}</Text>
                </ListItem.Part>
           </>
           ))
