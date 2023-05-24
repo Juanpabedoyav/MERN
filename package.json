@@ -2,6 +2,7 @@
   "name": "imagine",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "type": "module",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -15,7 +16,9 @@
     "expo": "~48.0.15",
     "expo-status-bar": "~1.4.4",
     "express": "^4.18.2",
+    "mongodb": "^5.5.0",
     "mongoose": "^7.2.0",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.22",
     "react": "18.2.0",
     "react-dom": "18.2.0",
