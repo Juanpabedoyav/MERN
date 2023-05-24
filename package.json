@@ -13,6 +13,7 @@
   "dependencies": {
     "@expo/webpack-config": "^18.0.1",
     "@react-native-community/datetimepicker": "6.7.3",
+    "@rnmapbox/maps": "^10.0.7-rc.0",
     "axios": "^1.4.0",
     "cors": "^2.8.5",
     "expo": "~48.0.15",
@@ -28,7 +29,7 @@
     "react-native-google-places-autocomplete": "^2.5.1",
     "react-native-paper": "^5.8.0",
     "react-native-web": "~0.18.10",
-    "styled-components": "5.2"
+    "react-router-native": "^6.11.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
