@@ -1,38 +1,23 @@
-import { TextInput, Button,  View } from 'react-native'
-import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
-// import DatePicker from 'react-native-date-picker'
+import {View, TextField, Text, Button} from 'react-native-ui-lib';
+
 const FormAddShipping = () => {
-  return (
-    <View>
-      <TextInput
-        //   style={styles.input}
-        //   onChangeText={onChangeText}
-        //   value={text}
-        placeholder="Origin Location"
-        keyboardType="ascii-capable"
-      />
-      <TextInput
-        //   style={styles.input}
-        //   onChangeText={onChangeText}
-        //   value={text}
-        placeholder="Destination  Location"
-        keyboardType="numeric"
-      />
-      <GooglePlacesAutocomplete
-        placeholder='Search'
-        onPress={(data, details = null) => {
-        // 'details' is provided when fetchDetails = true
-          console.log(data, details)
-        }}
-        query={{
-          key: 'AIzaSyCyS3JSRakMEWOBCKcTRFHwvJAUqspx2RU',
-          language: 'en',
-        }}
-      />
-      {/* <DatePicker date={''} onDateChange={''} /> */}
-      <Button title="Submit"/>
-    </View>
-  )
+const handleAddShipping = async() => {
+ 
+
 }
 
+  return (
+    <View flex paddingH-25 paddingT-120>
+    <Text blue50 text20>Welcome</Text>
+    <TextField text50 placeholder="username" grey10/>
+    <TextField text50 placeholder="password" secureTextEntry grey10/>
+    <TextField text50 placeholder="password" secureTextEntry grey10/>
+    <TextField text50 placeholder="password" secureTextEntry grey10/>
+
+    <View marginT-100 center>
+      <Button link text70 orange30 label="Add New Shipping" marginT-20 />
+    </View>
+  </View>
+  )
+}
 export default FormAddShipping

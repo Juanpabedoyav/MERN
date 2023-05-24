@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react'
 import { Text, View, Button } from 'react-native'
 import { ShippingsContext } from "../../context/shippings/ShippingsContext"
-import { DataTable } from 'react-native-paper';
-import { ShippingListContainer } from "./styles";
+import ModalShipping from "../ModalShipping";
+import { ListItem } from "react-native-ui-lib";
 const ShippingList = () => {
   const optionsPerPage = [2, 3, 4];
 
@@ -15,37 +15,19 @@ const ShippingList = () => {
   return (
     <>
       <Text>Shipping List</Text>
-       <ShippingListContainer>
-          <DataTable.Header>
-            <DataTable.Title>Place of Dispatch</DataTable.Title>
-            <DataTable.Title >place of Destination</DataTable.Title>
-            <DataTable.Title >Details</DataTable.Title>
-          </DataTable.Header>
-      {
-        shippings.map(shipping => (
-
-          <DataTable.Row key={shipping._id}>
-            <DataTable.Cell>{shipping._id}</DataTable.Cell>
-            <DataTable.Cell>{shipping.placeDispatch}</DataTable.Cell>
-            <DataTable.Cell>{shipping.placeDestination}</DataTable.Cell>
-            <DataTable.Cell>
-            <Button title="All Details"/>
-            </DataTable.Cell>
-          </DataTable.Row>
-
-      ))}
-          <DataTable.Pagination
-            page={page}
-            numberOfPages={3}
-            onPageChange={(page) => setPage(page)}
-            label="1-2 of 6"
-            optionsPerPage={optionsPerPage}
-            itemsPerPage={itemsPerPage}
-            setItemsPerPage={setItemsPerPage}
-            showFastPagination
-            optionsLabel={'Rows per page'}
-          />
-        </ShippingListContainer>
+      <ListItem onPress={() => console.log('pressed')}>
+        {shippings.map(shipping => (
+          <>
+            <ListItem.Part key={shipping._id} middle>
+            <Text grey10 text60 marginL-10>{shipping.placeDispatch}</Text>
+               <Text grey10 text60 marginL-10>{shipping.placeDestination}</Text>
+               </ListItem.Part>
+          </>
+          ))
+        }
+      </ListItem>
+         
+        <ModalShipping/>
     </>
   )
 }

@@ -12,7 +12,7 @@ const [state, dispatch] = useReducer(ShippingsReducer, INITIAL_STATE)
 
     const fetchShippingList = async () => {
         try {
-          const res = await axios.get('http://localhost:3000/api/shippings')
+          const res = await axios.get('http://192.168.20.26:3000/api/shippings')
           dispatch({type : 'setShippings', payload: res.data})
         } catch (error) {
           console.log(error)
