@@ -5,6 +5,7 @@ import axios from "axios"
 
 const INITIAL_STATE = {
     shippings: [],
+    newShipping: null,
 }
 
 const ShippingsProvider = ({children}) => {
@@ -24,7 +25,8 @@ const [state, dispatch] = useReducer(ShippingsReducer, INITIAL_STATE)
     
 
   return (
-    <ShippingsContext.Provider value={state}>
+    <ShippingsContext.Provider value={{...state,
+    dispatch} }>
         {children}
     </ShippingsContext.Provider>
   )

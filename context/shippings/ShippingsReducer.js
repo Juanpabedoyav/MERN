@@ -5,7 +5,11 @@ export const ShippingsReducer = (state, action) => {
                 ...state,
                 shippings: action.payload
             }
-    
+            case 'newShipping':
+                return{
+                    ...state,
+                    newShipping: action.payload
+                }
         default:
             return state;
     }
