@@ -58,6 +58,7 @@ const AddNewShipping = async( data) => {
     <Modal visible={visible} onBackgroundPress={hideModal} overlayBackgroundColor={'#C0C0C0'}>
       <ViewModal >
         <Text text60>New Shipping Details</Text>
+        <Text text80>ID: {newShipping?._id}</Text>
         <Text text80>Place to Dispatch: {newShipping?.placeDispatch}</Text>
         <Text text80>Place to Destination: {newShipping?.placeDestination}</Text>
         <Text text80>Date Dispatch: {newShipping?.createdAt}</Text>
