@@ -30,13 +30,12 @@ return (
 {
 shippings.map(shipping => (
 
-      <DataTable.Row key={shipping._id}>
+      <DataTable.Row key={shipping._id} style={styles.tableCell}>
         <DataTable.Cell >{shipping._id}</DataTable.Cell>
         <DataTable.Cell >{shipping.placeDispatch}</DataTable.Cell>
         <DataTable.Cell >
           <Button label="All Detalis"/>
         </DataTable.Cell>
-
       </DataTable.Row>
   ))
 }
@@ -57,8 +56,8 @@ shippings.map(shipping => (
   }
 const styles = StyleSheet.create({
   table: {
-    width: "90%",
-    boxShadow: "0 0 5px rgba(0,0,0,0.5)",
+    width: "100%",
+    boxShadow: "0 0 5px rgba(0,0,0,0.2)",
     height: 400,
     overflow: "scroll",
   },
@@ -66,9 +65,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   tableCell: {
-    flex: 1,
-    borderWidth: 1,
-    padding: 5,
+    padding: 2,
   },
   button:{
     padding: 0,
