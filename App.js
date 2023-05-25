@@ -5,6 +5,7 @@ import FindYourShipping from "./components/FindYourShipping"
 import { NativeRouter, Route, Routes } from "react-router-native"
 import FormAddShipping from "./components/FormAddShipping"
 import AppBar from "./components/AppBar"
+import ShippingDetails from "./components/ShippingDetails"
 export default function App() {
   return (
   //  <SafeAreaProvider>
@@ -18,6 +19,8 @@ export default function App() {
               <Route  path="" element={<Main/>} />
               <Route  path="/newShipping" element={<FormAddShipping/>} />
               <Route  path="/searchShipping" element={<FindYourShipping/>} />
+              <Route  path="/detail/:id" element={<ShippingDetails/>} />
+
             </Routes>
         </View>
       </ShippingsProvider>

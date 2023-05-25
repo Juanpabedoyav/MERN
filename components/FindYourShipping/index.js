@@ -27,7 +27,6 @@ const FindYourShipping = () => {
         placeholder={"What's your shipping code?"}
         floatingPlaceholder
         onChangeText={(text) => {setSearch(text)
-        console.log(text)
         }}
         />
       </View>

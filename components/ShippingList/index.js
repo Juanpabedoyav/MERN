@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { StyleSheet} from 'react-native'
 import { ShippingsContext } from "../../context/shippings/ShippingsContext"
 import { DataTable } from 'react-native-paper';
-import { Button, Text ,View} from "react-native-ui-lib";
+import {  Text ,View} from "react-native-ui-lib";
 import { Link } from "react-router-native";
 import { ButtonDetails } from "./stylex";
 
@@ -29,10 +29,9 @@ shippings.map(shipping => (
         <DataTable.Cell >{shipping._id}</DataTable.Cell>
         <DataTable.Cell >{shipping.placeDispatch}</DataTable.Cell>
         <DataTable.Cell >
-          <Link to={`/shipping/detail/${shipping._id}`} >
-            <ButtonDetails>Details</ButtonDetails>
-           </Link>
-
+          <Link to={`/detail/${shipping._id}`} >
+                <ButtonDetails>Details</ButtonDetails>
+          </Link>
         </DataTable.Cell>
       </DataTable.Row>
   ))
