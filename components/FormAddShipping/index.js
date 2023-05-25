@@ -2,7 +2,6 @@ import {View, TextField,  Button, Modal, Text} from 'react-native-ui-lib';
 import { ViewMain, ViewModal } from "./styles";
 import { useContext, useState } from "react";
 import { ShippingsContext } from "../../context/shippings/ShippingsContext";
-import { Link } from "react-router-native";
 
 
 const FormAddShipping = () => {
@@ -54,9 +53,7 @@ const AddNewShipping = async( data) => {
         />
       </View>
       <Button label="Add New Shipping" onPress={() =>AddNewShipping(test)}/>
-      <Link to="/">
-        <Text>Go to Home</Text>
-      </Link>
+     
     </ViewMain>
     <Modal visible={visible} onBackgroundPress={hideModal} overlayBackgroundColor={'#C0C0C0'}>
       <ViewModal >

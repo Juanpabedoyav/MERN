@@ -9,14 +9,15 @@ export default function App() {
   return (
   //  <SafeAreaProvider>
   <NativeRouter>
-      <ShippingsProvider>
+        <ShippingsProvider>
         <View style={styles.container} >
+        <AppBar />
             {/* <FindYourShipping /> */}
             {/* <ShippingList /> */}
             <Routes>
-              <Route exact path="" element={<Main/>} />
-              <Route exact path="/newShipping" element={<FormAddShipping/>} />
-              <Route exact path="/searchShipping" element={<FindYourShipping/>} />
+              <Route  path="" element={<Main/>} />
+              <Route  path="/newShipping" element={<FormAddShipping/>} />
+              <Route  path="/searchShipping" element={<FindYourShipping/>} />
             </Routes>
         </View>
       </ShippingsProvider>

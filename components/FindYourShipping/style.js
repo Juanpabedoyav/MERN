@@ -16,7 +16,7 @@ export const ViewResultShipping = styled(View)`
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 230px;
     width: 90%;
     justify-content: space-between;
     padding: 0.5rem;

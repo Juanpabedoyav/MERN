@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import { Appbar, FAB } from 'react-native-paper';
+import { Link, Navigate } from "react-router-native";
 
 
 
@@ -9,16 +10,19 @@ const AppBar = () => {
 
   return (
     <Appbar style={styles.bottom}>
-    
-      <Appbar.Action icon="inbox" onPress={() => {}} />
+     <Link to="/" >
+       <Appbar.Action icon="inbox"/>
+     </Link>
+      <Link to="/newShipping" >
       <FAB
         mode="flat"
         size="medium"
         icon="plus"
-        onPress={() => {}}
-       
-      />
-      <Appbar.Action icon="loupe" onPress={() => {}} />
+        />
+        </Link>
+      <Link to="/searchShipping" >
+        <Appbar.Action icon="loupe"/>
+      </Link>
     </Appbar>
   );
 };
