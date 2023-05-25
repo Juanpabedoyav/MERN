@@ -1,16 +1,21 @@
-import {  View } from 'react-native'
-import ShippingList from './components/ShippingList'
+import {  StyleSheet, View } from 'react-native'
 import ShippingsProvider from "./context/shippings/ShippingsProvider"
-import FormAddShipping from "./components/FormAddShipping"
-
+import Main from "./screens/Main"
 export default function App() {
   return (
     <ShippingsProvider>
-      <View >
-        <FormAddShipping />
-        {/* <ShippingList /> */}
+      <View style={styles.container} >
+          <Main />
       </View>
     </ShippingsProvider>
   )
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent:'center'
+  }
+})

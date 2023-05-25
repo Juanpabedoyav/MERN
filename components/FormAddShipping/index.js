@@ -1,23 +1,35 @@
-import {View, TextField, Text, Button} from 'react-native-ui-lib';
+import {View, TextField,  Button} from 'react-native-ui-lib';
+import { ViewMain } from "./styles";
+import { useState } from "react";
 
 const FormAddShipping = () => {
-const handleAddShipping = async() => {
- 
+const  [input, setInput] = useState({
+  "placeDispatch" : "",
+  "placeDestination" : ""
+})
+
+const newShipping = async() => {
+  
 
 }
-
   return (
-    <View >
-    <Text  text20>Create New Shipping</Text>
-    <TextField text50 placeholder="username" />
-    <TextField text50 placeholder="password" secureTextEntry />
-    <TextField text50 placeholder="password" secureTextEntry />
-    <TextField text50 placeholder="password" secureTextEntry />
+    <>
 
-    <View marginT-100 center>
+      {/* <Text text50>Create New Shipping</Text> */}
+   
+    <ViewMain>
+      <View>
+        <TextField
+        placeholder={'Place to Dispatch'}
+        floatingPlaceholder
+        />
+        <TextField  placeholder="Place to Destination" 
+        floatingPlaceholder
+        />
+      </View>
       <Button label="Add New Shipping"/>
-    </View>
-  </View>
+    </ViewMain>
+    </>
   )
 }
 export default FormAddShipping
