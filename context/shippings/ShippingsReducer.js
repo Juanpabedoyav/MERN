@@ -10,6 +10,11 @@ export const ShippingsReducer = (state, action) => {
                     ...state,
                     newShipping: action.payload
                 }
+                case 'searchShipping':
+                    return{
+                        ...state,
+                        searchShipping: action.payload
+                    }
         default:
             return state;
     }

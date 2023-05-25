@@ -1,11 +1,13 @@
 import {  StyleSheet, View } from 'react-native'
 import ShippingsProvider from "./context/shippings/ShippingsProvider"
 import Main from "./screens/Main"
+import FindYourShipping from "./components/FindYourShipping"
 export default function App() {
   return (
     <ShippingsProvider>
       <View style={styles.container} >
-          <Main />
+          {/* <Main /> */}
+          <FindYourShipping />
       </View>
     </ShippingsProvider>
   )

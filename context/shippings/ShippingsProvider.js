@@ -6,6 +6,7 @@ import axios from "axios"
 const INITIAL_STATE = {
     shippings: [],
     newShipping: null,
+    searchShipping: null
 }
 
 const ShippingsProvider = ({children}) => {

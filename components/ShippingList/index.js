@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react'
 import { Text, View, Button } from 'react-native'
 import { ShippingsContext } from "../../context/shippings/ShippingsContext"
-import ModalShipping from "../ModalShipping";
 import { ListItem } from "react-native-ui-lib";
 const ShippingList = () => {
   const optionsPerPage = [2, 3, 4];
@@ -27,7 +26,6 @@ const ShippingList = () => {
         }
       </ListItem>
          
-        <ModalShipping/>
     </>
   )
 }
