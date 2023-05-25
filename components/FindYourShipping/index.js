@@ -39,7 +39,7 @@ const FindYourShipping = () => {
           <Text text60>Your Shipping Details</Text>
           <Text text80>Place to Dispatch: {searchShipping?.placeDispatch}</Text>
           <Text text80>Place to Destination: {searchShipping?.placeDestination}</Text>
-          <Text text80>Date Dispatch: {searchShipping?.dateDispatch}</Text>
+          <Text text80>Date Dispatch: {searchShipping?.createdAt}</Text>
           <Text text80>Estimate Delivery: {searchShipping?.EstimateDelivery}</Text>
         </ViewResultShipping>
       :''

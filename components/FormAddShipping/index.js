@@ -59,7 +59,7 @@ const AddNewShipping = async( data) => {
         <Text text60>New Shipping Details</Text>
         <Text text80>Place to Dispatch: {newShipping?.placeDispatch}</Text>
         <Text text80>Place to Destination: {newShipping?.placeDestination}</Text>
-        <Text text80>Date Dispatch: {newShipping?.dateDispatch}</Text>
+        <Text text80>Date Dispatch: {newShipping?.createdAt}</Text>
         <Text text80>Estimate Delivery: {newShipping?.EstimateDelivery}</Text>
         <Button label="Close" onPress={() =>hideModal()} />
       </ViewModal>
