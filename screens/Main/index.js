@@ -6,7 +6,7 @@ import AppBar from "../../components/AppBar"
 const Main = () => {
   return (
     <>
-        {/* <AppBar /> */}
+        <AppBar />
         {/* <Routes>
             <Route exact path="/" > */}
                 <FormAddShipping />   

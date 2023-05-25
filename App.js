@@ -5,13 +5,16 @@ import FindYourShipping from "./components/FindYourShipping"
 import ShippingList from "./components/ShippingList"
 export default function App() {
   return (
+  //  <SafeAreaProvider>
     <ShippingsProvider>
       <View style={styles.container} >
-          {/* <Main /> */}
+          <Main />
           {/* <FindYourShipping /> */}
-          <ShippingList />
+          {/* <ShippingList /> */}
+          
       </View>
     </ShippingsProvider>
+  //  </SafeAreaProvider>
   )
 }
 
